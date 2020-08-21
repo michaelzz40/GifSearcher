@@ -1,4 +1,7 @@
+import Home from "./pages/Home";
+import Random from "./pages/Random";
+
 export const routes = [
-  { path: "/", component: LandingPage },
-  { path: "/about", component: About }
+  { path: "/", component: Home },
+  { path: "/random", component: Random }
 ];

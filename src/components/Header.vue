@@ -2,19 +2,21 @@
   <div class="navbar">
     <div class="navbar-left">
       <div class="links">
-        <a href="#">Home</a>
+        <router-link to="/" active-class="active" exact>Home</router-link>
       </div>
       <div class="links">
-        <a href="#">Random</a>
+        <router-link to="/random" exact active-class="active"
+          >Random</router-link
+        >
       </div>
     </div>
     <h1><span class="main-title">Gif</span> Searcher</h1>
     <div class="navbar-right">
       <div class="links">
-        <a href="#">Trending</a>
+        <router-link to="/">Trending</router-link>
       </div>
       <div class="links">
-        <a href="#">Categories</a>
+        <router-link to="/">Categories</router-link>
       </div>
     </div>
   </div>
@@ -30,7 +32,7 @@ export default {
 
 <style scoped>
 .navbar {
-  padding: 4em 6em;
+  padding: 4em 10em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -65,6 +67,8 @@ export default {
 
 .navbar .navbar-right .links a,
 .navbar .navbar-left .links a {
+  font-weight: 700;
+  text-transform: uppercase;
   text-decoration: none;
   color: var(--primary-color);
 }
@@ -94,6 +98,17 @@ export default {
   background: black;
   content: "";
 } */
+
+.navbar .navbar-right .links a.active,
+.navbar .navbar-left .links a.active {
+  text-transform: uppercase;
+  color: var(--border-color);
+}
+
+.navbar .navbar-right .links a.active:hover,
+.navbar .navbar-left .links a.active:hover {
+  transform: translateY(0);
+}
 
 .main-title {
   color: var(--border-color);

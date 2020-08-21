@@ -73,6 +73,7 @@ export default {
 .card-link input {
   border: none;
   outline: none;
+  color: rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
   padding: 10px;
   width: 85%;
@@ -80,10 +81,18 @@ export default {
 
 .copy-button {
   background: none;
+  border-radius: 50%;
   outline: none;
   border: none;
-  width: 15%;
+  height: 40px;
+  width: 40px;
   color: var(--border-color);
   padding: 10px;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.copy-button:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 </style>

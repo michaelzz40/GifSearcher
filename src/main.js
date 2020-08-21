@@ -7,14 +7,36 @@ import {
   faCheckCircle,
   faCopy
 } from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faFacebookMessenger,
+  faInstagram
+} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import VueClipboard from "vue-clipboard2";
+import VueRouter from "vue-router";
+import { routes } from "./routes";
 
 Vue.config.productionTip = false;
-library.add(faUserSecret, faSearch, faCheckCircle, faCopy);
+library.add(
+  faUserSecret,
+  faSearch,
+  faCheckCircle,
+  faCopy,
+  faGithub,
+  faFacebookMessenger,
+  faInstagram
+);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.use(VueClipboard);
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+  routes,
+  mode: "history"
+});
 
 new Vue({
-  render: h => h(App)
+  render: h => h(App),
+  router
 }).$mount("#app");
