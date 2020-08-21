@@ -67,6 +67,7 @@ form .search-input {
   color: var(--primary-color);
   border: none;
   outline: none;
+  background: var(--background-color);
   width: 300px;
   padding: 5px 10px;
   margin: 0px 10px;

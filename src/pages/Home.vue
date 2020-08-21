@@ -5,7 +5,11 @@
       @searchUpdated="searchTerm = $event"
       @limitUpdated="limit = $event"
     ></Form>
-    <ImageLists v-if="gifs.length > 0" :gifs="gifs"></ImageLists>
+    <ImageLists
+      v-if="gifs.length > 0"
+      :isLoading="isLoading"
+      :gifs="gifs"
+    ></ImageLists>
     <h1 v-if="!isLoading && gifs.length === 0">No Images Found</h1>
   </div>
 </template>

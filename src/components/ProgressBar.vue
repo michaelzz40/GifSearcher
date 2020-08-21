@@ -13,6 +13,7 @@ export default {
   position: fixed;
   top: 0;
   height: 5px;
+  z-index: 6;
   background-color: var(--border-color);
   animation: loading 1.5s ease;
 }

@@ -115,4 +115,58 @@ export default {
   box-shadow: 0 0 5px 1px var(--border-color);
   padding: 10px;
 }
+
+/* Ipad Size */
+
+@media screen and (min-width: 768px) and (max-width: 960px) {
+  .navbar {
+    display: grid;
+    grid-template-areas:
+      "title title title title"
+      "left left right right";
+    gap: 20px;
+    padding: 4em 6em;
+  }
+
+  .navbar h1 {
+    grid-area: title;
+    text-align: center;
+  }
+  .navbar .navbar-left {
+    width: 100%;
+    grid-area: left;
+    margin-top: 20px;
+  }
+  .navbar .navbar-right {
+    width: 100%;
+    grid-area: right;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .navbar {
+    display: grid;
+    grid-template-areas:
+      "title title"
+      "left left"
+      "right right";
+    padding: 2em 2em;
+  }
+
+  .navbar h1 {
+    grid-area: title;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.3em;
+  }
+  .navbar .navbar-left {
+    width: 100%;
+    grid-area: left;
+  }
+  .navbar .navbar-right {
+    width: 100%;
+    grid-area: right;
+  }
+}
 </style>

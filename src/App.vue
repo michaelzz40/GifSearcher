@@ -33,7 +33,7 @@ export default {
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: var(--primary-background);
 }
 
 * {
