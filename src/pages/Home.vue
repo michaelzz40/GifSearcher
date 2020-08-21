@@ -34,7 +34,7 @@ export default {
       this.isLoading = true;
       axios
         .get(
-          `https://api.giphy.com/v1/gifs/search?q=${this.searchTerm}&limit=${this.limit}&api_key=dc6zaTOxFJmzC`
+          `https://api.giphy.com/v1/gifs/search?q=${this.searchTerm}&limit=${this.limit}&api_key=${process.env.VUE_APP_API_KEY}`
         )
         .then(data => {
           this.buildGifs(data);
@@ -49,7 +49,7 @@ export default {
       this.isLoading = true;
       axios
         .get(
-          `https://api.giphy.com/v1/gifs/search?q=${this.searchTerm}&limit=${this.limit}&api_key=dc6zaTOxFJmzC`
+          `https://api.giphy.com/v1/gifs/search?q=${this.searchTerm}&limit=${this.limit}&api_key=${process.env.VUE_APP_API_KEY}`
         )
         .then(data => {
           this.buildGifs(data);
@@ -77,7 +77,7 @@ export default {
     this.isLoading = true;
     axios
       .get(
-        `https://api.giphy.com/v1/gifs/search?q=Masters&limit=10&api_key=dc6zaTOxFJmzC`
+        `https://api.giphy.com/v1/gifs/search?q=Masters&limit=10&api_key=${process.env.VUE_APP_API_KEY}`
       )
       .then(data => {
         this.buildGifs(data);

@@ -39,7 +39,9 @@ export default {
   created() {
     this.isLoading = true;
     axios
-      .get(`https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC`)
+      .get(
+        `https://api.giphy.com/v1/gifs/random?api_key=${process.env.VUE_APP_API_KEY}`
+      )
       .then(data => {
         const newGif = {
           id: data.data.data.id,
