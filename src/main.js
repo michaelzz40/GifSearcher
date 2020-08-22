@@ -16,6 +16,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import VueClipboard from "vue-clipboard2";
 import VueRouter from "vue-router";
 import { routes } from "./routes";
+import infiniteScroll from "vue-infinite-scroll";
 
 Vue.config.productionTip = false;
 library.add(
@@ -30,6 +31,7 @@ library.add(
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.use(VueClipboard);
 Vue.use(VueRouter);
+Vue.use(infiniteScroll);
 
 const router = new VueRouter({
   routes,

@@ -55,7 +55,7 @@ export default {
       this.message = "";
     },
     fetchNew() {
-      this.loading = true;
+      this.isLoading = true;
       axios
         .get(
           `https://api.giphy.com/v1/gifs/random?api_key=${process.env.VUE_APP_API_KEY}`
@@ -209,7 +209,7 @@ export default {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 960px) {
   .random-section {
     padding: 4em 6em;
   }

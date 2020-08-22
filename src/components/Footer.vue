@@ -1,6 +1,11 @@
 <template>
   <div class="footer">
+    <p class="copyright">
+      all gif provided by <a href="https://www.giphy.com">Giphy</a>
+    </p>
+
     <h3 class="copyright">Copyright &copy; Michael</h3>
+
     <div class="social-media">
       <a href="https://www.facebook.com/michaelzz/"
         ><font-awesome-icon
@@ -32,6 +37,7 @@ export default {};
   position: relative;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 .footer h3 {
@@ -39,8 +45,23 @@ export default {};
   font-size: 0.8em;
   text-transform: uppercase;
 }
+.footer p {
+  padding-bottom: 20px;
+  color: #f6f6f6;
+  font-size: 0.6em;
+  text-transform: uppercase;
+}
+.footer a {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  color: var(--primary-background);
+}
+
+span {
+  color: var(--primary-background);
+}
 .social-media {
-  padding: 2em 4em;
+  padding-bottom: 2em;
   width: 100%;
   text-align: center;
   position: absolute;

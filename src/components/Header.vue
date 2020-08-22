@@ -13,7 +13,9 @@
     <h1><span class="main-title">Gif</span> Searcher</h1>
     <div class="navbar-right">
       <div class="links">
-        <router-link to="/">Trending</router-link>
+        <router-link to="/trending" exact active-class="active"
+          >Trending</router-link
+        >
       </div>
       <div class="links">
         <router-link to="/">Categories</router-link>

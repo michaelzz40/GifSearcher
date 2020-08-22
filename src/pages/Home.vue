@@ -81,7 +81,7 @@ export default {
     this.isLoading = true;
     axios
       .get(
-        `https://api.giphy.com/v1/gifs/search?q=Masters&limit=10&api_key=${process.env.VUE_APP_API_KEY}`
+        `https://api.giphy.com/v1/gifs/search?q=Welcome&limit=25&api_key=${process.env.VUE_APP_API_KEY}`
       )
       .then(data => {
         this.buildGifs(data);
