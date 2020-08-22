@@ -17,6 +17,7 @@ import VueClipboard from "vue-clipboard2";
 import VueRouter from "vue-router";
 import { routes } from "./routes";
 import infiniteScroll from "vue-infinite-scroll";
+import AOS from "aos";
 
 Vue.config.productionTip = false;
 library.add(
@@ -40,5 +41,8 @@ const router = new VueRouter({
 
 new Vue({
   render: h => h(App),
+  created() {
+    AOS.init();
+  },
   router
 }).$mount("#app");

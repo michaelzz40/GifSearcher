@@ -2,7 +2,7 @@
   <div
     v-infinite-scroll="loadMore"
     infinite-scroll-disabled="busy"
-    infinite-scroll-distance="0"
+    infinite-scroll-distance="10"
     class="trending-section"
   >
     <ProgressBar :isLoading="isLoading"></ProgressBar>

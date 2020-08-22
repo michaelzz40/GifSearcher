@@ -18,7 +18,7 @@
         >
       </div>
       <div class="links">
-        <router-link to="/">Categories</router-link>
+        <router-link to="/">About</router-link>
       </div>
     </div>
   </div>

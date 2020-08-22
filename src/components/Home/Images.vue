@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" data-aos="fade-right" data-aos-duration="3500">
     <div class="img-box">
       <img :src="gif.image" alt="image" />
     </div>
