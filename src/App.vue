@@ -1,13 +1,15 @@
 <template>
-  <div id="app">
-    <Header></Header>
-    <keep-alive>
-      <transition name="fade" mode="out-in">
-        <router-view></router-view>
-      </transition>
-    </keep-alive>
+  <v-app>
+    <Header class="grey lighten-4"></Header>
+    <v-content class="grey lighten-4">
+      <keep-alive>
+        <transition name="fade" mode="out-in">
+          <router-view></router-view>
+        </transition>
+      </keep-alive>
+    </v-content>
     <Footer></Footer>
-  </div>
+  </v-app>
 </template>
 
 <script>
@@ -32,13 +34,7 @@ export default {
   --border-color: #ffc7c7;
 }
 
-body {
-  background-color: var(--primary-background);
-}
-
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }

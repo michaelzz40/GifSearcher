@@ -18,6 +18,7 @@ import VueRouter from "vue-router";
 import { routes } from "./routes";
 import infiniteScroll from "vue-infinite-scroll";
 import AOS from "aos";
+import vuetify from "./plugins/vuetify";
 
 Vue.config.productionTip = false;
 library.add(
@@ -44,5 +45,6 @@ new Vue({
   created() {
     AOS.init();
   },
+  vuetify,
   router
 }).$mount("#app");

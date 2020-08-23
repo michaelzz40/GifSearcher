@@ -88,6 +88,7 @@ export default {
   position: relative;
 }
 .add-post {
+  background-color: white;
   position: relative;
   width: 100%;
   padding: 4em 10em;

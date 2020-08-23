@@ -1,33 +1,69 @@
 <template>
-  <div class="navbar">
-    <div class="navbar-left">
-      <div class="links">
-        <router-link to="/" active-class="active" exact>Home</router-link>
+  <div>
+    <nav class="navbar">
+      <v-app-bar-nav-icon
+        class="pink--text text--lighten-4 hidden-sm-and-up"
+        @click="drawer = !drawer"
+      ></v-app-bar-nav-icon>
+      <v-navigation-drawer v-model="drawer" app class="pink lighten-4">
+        <v-list>
+          <v-list-item class="flex-row-reverse ">
+            <v-list-item-icon>
+              <v-icon
+                class="pink lighten-3 rounded-circle white--text pa-3"
+                @click="drawer = !drawer"
+                >mdi-chevron-left</v-icon
+              >
+            </v-list-item-icon>
+          </v-list-item>
+          <v-list-item
+            :key="index"
+            v-for="(link, index) in links"
+            router
+            :to="link.route"
+          >
+            <v-list-item-icon>
+              <v-icon class="white--text">{{ link.icon }}</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title class="white--text">{{
+                link.text
+              }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list></v-navigation-drawer
+      >
+      <div class="navbar-left hidden-xs-only">
+        <div class="links">
+          <router-link to="/" active-class="active" exact>Home</router-link>
+        </div>
+        <div class="links">
+          <router-link to="/random" exact active-class="active"
+            >Random</router-link
+          >
+        </div>
+        <div class="links">
+          <router-link to="/trending" exact active-class="active"
+            >Trending</router-link
+          >
+        </div>
       </div>
-      <div class="links">
-        <router-link to="/random" exact active-class="active"
-          >Random</router-link
-        >
-      </div>
-    </div>
-    <h1><span class="main-title">Gif</span> Searcher</h1>
-    <div class="navbar-right">
-      <div class="links">
-        <router-link to="/trending" exact active-class="active"
-          >Trending</router-link
-        >
-      </div>
-      <div class="links">
-        <router-link to="/">About</router-link>
-      </div>
-    </div>
+      <h1><span class="main-title">Gif</span> Searcher</h1>
+    </nav>
   </div>
 </template>
 
 <script>
 export default {
   data() {
-    return {};
+    return {
+      links: [
+        { icon: "mdi-home", text: "Home", route: "/" },
+        { icon: "mdi-trending-up", text: "Random", route: "/random" },
+        { icon: "mdi-view-dashboard", text: "Trending", route: "/trending" }
+      ],
+      drawer: false
+    };
   }
 };
 </script>
@@ -45,15 +81,13 @@ export default {
   letter-spacing: 1px;
 }
 
-.navbar .navbar-right,
 .navbar .navbar-left {
-  width: 25%;
+  width: 30%;
   display: flex;
   justify-content: space-between;
   position: relative;
 }
 
-.navbar .navbar-right .links,
 .navbar .navbar-left .links {
   position: relative;
   padding: 20px 0px;
@@ -120,14 +154,15 @@ export default {
 
 /* Ipad Size */
 
-@media screen and (min-width: 768px) and (max-width: 960px) {
+@media screen and (min-width: 376px) and (max-width: 960px) {
   .navbar {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-      "title title title title"
-      "left left right right";
+      "title title"
+      "left left";
     gap: 20px;
-    padding: 4em 6em;
+    padding: 2em 10em;
   }
 
   .navbar h1 {
@@ -146,29 +181,10 @@ export default {
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 767px) {
+@media screen and (max-width: 600px) {
   .navbar {
-    display: grid;
-    grid-template-areas:
-      "title title"
-      "left left"
-      "right right";
-    padding: 2em 2em;
-  }
-
-  .navbar h1 {
-    grid-area: title;
-    text-align: center;
-    padding: 20px;
-    font-size: 1.3em;
-  }
-  .navbar .navbar-left {
-    width: 100%;
-    grid-area: left;
-  }
-  .navbar .navbar-right {
-    width: 100%;
-    grid-area: right;
+    display: flex;
+    padding: 2em 1em;
   }
 }
 </style>

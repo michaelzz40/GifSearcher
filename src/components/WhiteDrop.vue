@@ -15,7 +15,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--primary-background);
   display: flex;
   justify-content: center;
 }

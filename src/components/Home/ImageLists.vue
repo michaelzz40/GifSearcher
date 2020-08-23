@@ -1,7 +1,7 @@
 <template>
   <div>
     <Alert :message="message"></Alert>
-    <div class="images-section">
+    <div class="images-section ">
       <WhiteDrop v-if="isLoading"></WhiteDrop>
       <Images
         @copied="message = $event"
@@ -55,5 +55,18 @@ export default {
 
 span {
   color: var(--primary-text);
+}
+@media screen and (min-width: 376px) and (max-width: 960px) {
+  .images-section {
+    padding: 2em 2em;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .images-section {
+    padding: 2em 1em;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 </style>
