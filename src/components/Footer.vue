@@ -32,7 +32,6 @@ export default {};
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
   background-color: var(--border-color);
   color: #333333;
-  margin-top: 3em;
   padding: 4em 10em;
   position: relative;
   display: flex;

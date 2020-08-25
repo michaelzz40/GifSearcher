@@ -11,10 +11,13 @@
             <v-list-item-icon>
               <v-icon
                 class="pink lighten-3 rounded-circle white--text pa-3"
-                @click="drawer = !drawer"
+                @click="drawer = false"
                 >mdi-chevron-left</v-icon
               >
             </v-list-item-icon>
+          </v-list-item>
+          <v-list-item>
+            <v-spacer></v-spacer>
           </v-list-item>
           <v-list-item
             :key="index"
@@ -59,8 +62,8 @@ export default {
     return {
       links: [
         { icon: "mdi-home", text: "Home", route: "/" },
-        { icon: "mdi-trending-up", text: "Random", route: "/random" },
-        { icon: "mdi-view-dashboard", text: "Trending", route: "/trending" }
+        { icon: "mdi-help", text: "Random", route: "/random" },
+        { icon: "mdi-trending-up", text: "Trending", route: "/trending" }
       ],
       drawer: false
     };

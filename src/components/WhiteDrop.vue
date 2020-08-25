@@ -1,5 +1,5 @@
 <template>
-  <div class="white-drop">
+  <div class="white-drop grey lighten-4">
     <span class="dot d1"></span>
     <span class="dot d2"></span>
     <span class="dot d3"></span>
